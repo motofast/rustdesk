@@ -48,6 +48,8 @@ jobs:
 
       - name: Apply Moto Fast branding
         shell: bash
+        env:
+          PRESET_PASSWORD: ${{ secrets.MOTOFAST_PRESET_PASSWORD }}
         run: bash res/motofast/apply-branding.sh
 
       - name: Restore bridge files
